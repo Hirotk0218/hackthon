@@ -1,9 +1,26 @@
 <template>
-  <div id="app">
-    <h1>カテゴリ</h1>
-    <v-select :options="options"></v-select>
-    <hr />
-    <croppa v-model="Croppa" canvas-color="transparent"></croppa>
+  <div id="parent">
+    <div class="item">
+      <div class="value">
+        <h1>カテゴリー</h1>
+      </div>
+      <div class="dropper">
+        <v-select :options="options"></v-select>
+      </div>
+    </div>
+    <div class="item">
+      <div class="value">
+        <h1>アクセスポイント</h1>
+      </div>
+      <textarea v-model="message" placeholder="アピールポイントを記入してください。" cols="50"></textarea>
+    </div>
+    <br />
+    <div class="item">
+      <div class="value">
+        <h1>写真のアップロード</h1>
+      </div>
+      <croppa v-model="Croppa" canvas-color="#F2F2F2"></croppa>
+    </div>
   </div>
 </template>
  
@@ -22,7 +39,7 @@ export default {
   data() {
     return {
       Croppa: null,
-      options: ["aaa", "bbb"]
+      options: ["スポーツ", "グルメ", "アクティビティ", "風景", "その他"]
     };
   },
   methods: {
@@ -47,36 +64,52 @@ body {
 }
 
 h1,
+h2,
+h3,
 .muted {
   color: #2c3e5099;
 }
 
 h1 {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
 }
 
-#app {
-  max-width: 30em;
-  margin: 1em auto;
+#parent {
+  margin-top: 40px;
+  margin-left: 20px;
 }
-#video {
-  background-color: #000000;
+
+.item {
+  display: flex;
+  margin-top: 20px;
 }
-#canvas {
-  display: none;
+
+.value {
+  display: flex;
+  width: 200px;
+  height: 60px;
+  margin-right: 50px;
 }
+
+.dropper {
+  width: 200px;
+}
+
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
