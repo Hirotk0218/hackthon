@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Vue Select</h1>
+    <h1>カテゴリ</h1>
     <v-select :options="options"></v-select>
   </div>
 </template>
