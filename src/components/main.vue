@@ -2,49 +2,70 @@
   <div id="app">
     <h1>カテゴリ</h1>
     <v-select :options="options"></v-select>
+    <hr />
+    <croppa v-model="Croppa" canvas-color="transparent"></croppa>
   </div>
 </template>
  
 <script>
-import Vue from 'vue'
-import vSelect from 'vue-select'
-import 'vue-select/dist/vue-select.css';
- 
-Vue.component('v-select', vSelect)
- 
+import Vue from "vue";
+import Croppa from "vue-croppa";
+import vSelect from "vue-select";
+import "vue-select/dist/vue-select.css";
+import { Stream } from "stream";
+
+Vue.component("v-select", vSelect);
+Vue.use(Croppa);
+
 export default {
-  name: '#app',
-  data () {
+  name: "#app",
+  data() {
     return {
-      options: ['aaa', 'bbb']
+      Croppa: null,
+      options: ["aaa", "bbb"]
+    };
+  },
+  methods: {
+    generateImage: function() {
+      let url = this.Croppa.generateDataUrl();
+      if (!url) {
+        alert("no image");
+        return;
+      }
     }
   }
-}
+};
 </script>
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 body {
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
   -moz-text-size-adjust: none;
 }
- 
-h1,.muted {
+
+h1,
+.muted {
   color: #2c3e5099;
 }
- 
+
 h1 {
   font-size: 26px;
   font-weight: 600;
 }
- 
+
 #app {
   max-width: 30em;
   margin: 1em auto;
 }
- 
+#video {
+  background-color: #000000;
+}
+#canvas {
+  display: none;
+}
 h3 {
   margin: 40px 0 0;
 }
