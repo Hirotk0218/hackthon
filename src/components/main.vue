@@ -21,6 +21,11 @@
       </div>
       <croppa v-model="Croppa" canvas-color="#F2F2F2"></croppa>
     </div>
+    <div class="item">
+      <button class="button" @click="postData">
+        <h2>投稿</h2>
+      </button>
+    </div>
   </div>
 </template>
  
@@ -49,6 +54,9 @@ export default {
         alert("no image");
         return;
       }
+    },
+    postData: function() {
+      window.close();
     }
   }
 };
@@ -56,6 +64,7 @@ export default {
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -64,15 +73,22 @@ body {
 }
 
 h1,
-h2,
-h3,
 .muted {
-  color: #2c3e5099;
+  color: #454545;
+}
+
+h2,
+.muted {
+  color: #454545;
 }
 
 h1 {
   font-size: 20px;
   font-weight: 600;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 #parent {
@@ -94,6 +110,14 @@ h1 {
 
 .dropper {
   width: 200px;
+}
+
+.button {
+  width: 520px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+  background-color: #cc7e38;
 }
 
 h3 {
