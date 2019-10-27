@@ -102,7 +102,7 @@ h2 {
 }
 
 .dropper {
-  width: 100%;
+  width: 100vw;
 }
 
 .contents {
