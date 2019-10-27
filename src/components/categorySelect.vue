@@ -153,7 +153,7 @@ export default {
       result = result.data;
       if (result.status == 0 && 0 < result.data.length) {
         // データがある場合
-        this.selectedCategory = result.data[0].categories;
+        this.selectedCategory = result.data[0].categories | [];
       }
     },
     async setUserCategoryData(userId, categories) {
