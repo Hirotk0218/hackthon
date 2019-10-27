@@ -24,6 +24,7 @@
       </button>
     </div>
     <router-link to="/category">category</router-link>
+    <router-link to="/mypage">mypage</router-link>
   </div>
 </template>
  

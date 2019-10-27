@@ -49,7 +49,7 @@ export default {
       selectedBuilding: true,
       selectedCelebrity: true,
       // 表示用の画像リソース
-      viewIcon: requite("../asset/view.png"),
+      viewIcon: "../asset/view.png",
       restaurantIcon: "../asset/restaurant.png",
       instagramIcon: "../asset/instagram.png",
       secretIcon: "../asset/secret.png",
@@ -150,7 +150,7 @@ export default {
         userid: userId
       };
       let result = await axios.post(url, requestData);
-      result = result.data;
+      result = result.data; 
       if (result.status == 0 && 0 < result.data.length) {
         // データがある場合
         this.selectedCategory = result.data[0].categories | [];
