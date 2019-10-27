@@ -4,9 +4,7 @@
       <div class="value">
         <h1>カテゴリー</h1>
       </div>
-      <div class="dropper">
-        <v-select :options="options"></v-select>
-      </div>
+      <v-select class="dropper" :options="options"></v-select>
     </div>
     <div class="item">
       <div class="value">
@@ -91,8 +89,6 @@ h2 {
 }
 
 #parent {
-  margin-top: 10px;
-  margin-bottom: 5px;
   margin-left: 10px;
   margin-right: 10px;
 }
