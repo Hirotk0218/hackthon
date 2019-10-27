@@ -13,6 +13,13 @@ function liffInitialize () {
     )
 }
 
+// UserProfileを取得します
+function getProfile (callback) {
+    liff.getProfile().then(function (profile) {
+        callback(profile);
+    });
+ }
+
 //Messageの送付
 function sendTextMessage (msg) {
     liff.sendMessages([
