@@ -10,16 +10,16 @@
     </div>
     <div class="item">
       <div class="value">
-        <h1>アクセスポイント</h1>
+        <h1>アピールポイント</h1>
       </div>
-      <textarea v-model="message" placeholder="アピールポイントを記入してください。" cols="50"></textarea>
+      <textarea v-model="message" class="text" placeholder="アピールポイントを記入してください。" cols="50"></textarea>
     </div>
     <br />
     <div class="item">
       <div class="value">
         <h1>写真のアップロード</h1>
       </div>
-      <croppa v-model="Croppa" canvas-color="#F2F2F2"></croppa>
+      <croppa v-model="Croppa" class="contents" canvas-color="#F2F2F2"></croppa>
     </div>
     <div class="item">
       <button class="button" @click="postData">
@@ -56,7 +56,7 @@ export default {
       }
     },
     postData: function() {
-      window.close();
+      liff.closeWindow();
     }
   }
 };
@@ -64,7 +64,6 @@ export default {
  
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizelegibility;
@@ -79,7 +78,7 @@ h1,
 
 h2,
 .muted {
-  color: #454545;
+  color: #f5f5f5;
 }
 
 h1 {
@@ -92,32 +91,43 @@ h2 {
 }
 
 #parent {
-  margin-top: 40px;
-  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .item {
-  display: flex;
   margin-top: 20px;
 }
 
 .value {
   display: flex;
-  width: 200px;
+  width: 100vw;
   height: 60px;
   margin-right: 50px;
 }
 
 .dropper {
-  width: 200px;
+  display: flex;
+  width: 100vw;
+}
+
+.contents {
+  display: flex;
+}
+
+.text {
+  display: flex;
+  width: 100vw;
 }
 
 .button {
-  width: 520px;
+  width: 100vw;
   padding: 10px;
   margin-top: 10px;
   font-size: 16px;
-  background-color: #cc7e38;
+  background-color: #ef6e6e;
 }
 
 h3 {
