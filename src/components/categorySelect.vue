@@ -1,12 +1,30 @@
 <template>
   <div class="BaseView">
     <div class="flexbox">
-      <div class="box"><img v-bind:src="viewIcon" alt v-on:click='tapedAction("view")' /></div>
-      <!-- <div class="box"><img src= {{restaurantIcon}} alt v-on:click='tapedAction("restaurant")' /></div>
-      <div class="box"><img src= {{instagramIcon}} alt v-on:click='tapedAction("instagram")' /></div>
-      <div class="box"><img src= {{secretIcon}} alt v-on:click='tapedAction("secret")' /></div>
-      <div class="box"><img src= {{buildingIcon}} alt v-on:click='tapedAction("building")' /></div>
-      <div class="box"><img src= {{celebrityIcon}} alt v-on:click='tapedAction("celebrity")' /></div> -->
+      <div class="box">
+        <img src="../asset/view_hover.png" alt v-on:click='tapedAction("view")' v-if="selectedView"/>
+        <img src="../asset/view.png" alt v-on:click='tapedAction("view")' v-else/>
+      </div>
+      <div class="box">
+        <img src="../asset/restaurant_hover.png" alt v-on:click='tapedAction("restaurant")' v-if="selectedRestaurant"/>
+        <img src="../asset/restaurant.png" alt v-on:click='tapedAction("restaurant")' v-else/>
+      </div>
+      <div class="box">
+        <img src="../asset/instagram_hover.png" alt v-on:click='tapedAction("instagram")' v-if="selectedInstagram"/>
+        <img src="../asset/instagram.png" alt v-on:click='tapedAction("instagram")' v-else/>
+      </div>
+      <div class="box">
+        <img src="../asset/secret_hover.png" alt v-on:click='tapedAction("secret")' v-if="selectedSecret"/>
+        <img src="../asset/secret.png" alt v-on:click='tapedAction("secret")' v-else/>
+      </div>
+      <div class="box">
+        <img src="../asset/building_hover.png" alt v-on:click='tapedAction("building")' v-if="selectedBuilding"/>
+        <img src="../asset/building.png" alt v-on:click='tapedAction("building")' v-else/>
+      </div>
+      <div class="box">
+        <img src="../asset/celebrity_hover.png" alt v-on:click='tapedAction("celebrity")' v-if="selectedBuilding"/>
+        <img src="../asset/celebrity.png" alt v-on:click='tapedAction("celebrity")' v-else/>
+      </div>
     </div>
   </div>
 </template>
