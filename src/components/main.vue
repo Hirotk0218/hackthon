@@ -80,8 +80,7 @@ h2,
 }
 
 h1 {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 16px;
 }
 
 h2 {
@@ -89,8 +88,9 @@ h2 {
 }
 
 #parent {
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 16px;
+  margin-right: 16px;
+  margin-bottom: 8px;
 }
 
 .item {
@@ -110,7 +110,7 @@ h2 {
 }
 
 .contents {
-  display: flex;
+  width: 90vw;
 }
 
 .text {
