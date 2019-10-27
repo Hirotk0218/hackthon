@@ -10,7 +10,7 @@
       <div class="value">
         <h1>アピールポイント</h1>
       </div>
-      <textarea v-model="message" class="text" placeholder="アピールポイントを記入してください。" cols="50" rows="5"></textarea>
+      <textarea v-model="message" class="text" placeholder="アピールポイントを記入してください。" cols="50" rows="3"></textarea>
     </div>
     <div class="item">
       <div class="value">
