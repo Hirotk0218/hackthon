@@ -87,9 +87,8 @@ h2 {
 }
 
 #parent {
-  margin-left: 16px;
-  margin-right: 16px;
-  margin-bottom: 8px;
+  width: 100vw;
+  height: 100vh;
 }
 
 .item {
