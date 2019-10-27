@@ -23,6 +23,7 @@
         <h2>投稿</h2>
       </button>
     </div>
+    <router-link to="/category">category</router-link>
   </div>
 </template>
  
@@ -41,7 +42,7 @@ export default {
   data() {
     return {
       Croppa: null,
-      options: ["スポーツ", "グルメ", "アクティビティ", "風景", "その他"]
+      options: ["風景", "飲食店", "インスタ映え", "穴場", "建物", "有名人"]
     };
   },
   methods: {
