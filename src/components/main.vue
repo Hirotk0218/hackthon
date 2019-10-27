@@ -87,8 +87,8 @@ h2 {
 }
 
 #parent {
-  width: 100vw;
-  height: 100vh;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .item {
@@ -101,7 +101,7 @@ h2 {
 }
 
 .dropper {
-  width: 100vw;
+  width: 100%;
 }
 
 .contents {
@@ -116,6 +116,7 @@ h2 {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
+  margin-bottom: 8px;
   font-size: 16px;
   background-color: #ef6e6e;
 }
