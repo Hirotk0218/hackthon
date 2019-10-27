@@ -10,9 +10,8 @@
       <div class="value">
         <h1>アピールポイント</h1>
       </div>
-      <textarea v-model="message" class="text" placeholder="アピールポイントを記入してください。" cols="50"></textarea>
+      <textarea v-model="message" class="text" placeholder="アピールポイントを記入してください。" cols="50" rows="5"></textarea>
     </div>
-    <br />
     <div class="item">
       <div class="value">
         <h1>写真のアップロード</h1>
@@ -99,22 +98,18 @@ h2 {
 
 .value {
   display: flex;
-  width: 100%;
-  height: 60px;
-  margin-right: 50px;
+  margin-bottom: 10px;
 }
 
 .dropper {
-  display: flex;
   width: 100%;
 }
 
 .contents {
-  width: 90vw;
+  width: 100%;
 }
 
 .text {
-  display: flex;
   width: 100%;
 }
 
