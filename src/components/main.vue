@@ -103,14 +103,14 @@ h2 {
 
 .value {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 60px;
   margin-right: 50px;
 }
 
 .dropper {
   display: flex;
-  width: 100vw;
+  width: 100%;
 }
 
 .contents {
@@ -119,11 +119,11 @@ h2 {
 
 .text {
   display: flex;
-  width: 100vw;
+  width: 100%;
 }
 
 .button {
-  width: 100vw;
+  width: 100%;
   padding: 10px;
   margin-top: 10px;
   font-size: 16px;
